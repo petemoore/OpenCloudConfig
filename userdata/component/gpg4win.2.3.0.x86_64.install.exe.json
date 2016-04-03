@@ -1,0 +1,56 @@
+{
+  "component": {
+    "name": "gpg4win",
+    "version": "2.3.0",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  "parameters": [
+    {
+      "name": "sources",
+      "value": [
+        "http://files.gpg4win.org/gpg4win-2.3.0.exe"
+      ]
+    },
+    {
+      "name": "args",
+      "value": [
+        "/S"
+      ]
+    },
+    {
+      "name": "validations",
+      "value": [
+        {
+          "provider": "powershell-function",
+          "parameters": [
+            {
+              "name": "command",
+              "value" "Test-Path"
+            },
+            {
+              "name": "parameters",
+              "value": [
+                {
+                  "name": "Path",
+                  "value": [
+                    "${env:ProgramFiles(x86)}\\GNU\\GnuPG\\pub\\gpg.exe"
+                  ]
+                },
+                {
+                  "name": "ErrorAction",
+                  "value": "SilentlyContinue"
+                }
+              ]
+            },
+            {
+              "name": "expect",
+              "value": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

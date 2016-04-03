@@ -1,0 +1,51 @@
+[
+  {
+    "name": "directx-sdk",
+    "version": "Jun10",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  {
+    "name": "mozilla-build",
+    "version": "2.1.0",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  {
+    "name": "mercurial",
+    "version": "3.7.3",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  {
+    "name": "sublime-text",
+    "version": "3103",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  {
+    "name": "cygwin",
+    "version": "2.4.1",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  },
+  {
+    "name": "cygwin-sshd",
+    "version": "2.4.1",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "actions"
+  },
+  {
+    "name": "gpg4win",
+    "version": "2.3.0",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "exe"
+  }
+]

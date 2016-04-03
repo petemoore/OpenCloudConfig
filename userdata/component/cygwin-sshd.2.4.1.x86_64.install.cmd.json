@@ -1,0 +1,136 @@
+{
+  "component": {
+    "name": "cygwin-sshd",
+    "version": "2.4.1",
+    "arch": "x86-64",
+    "action": "install",
+    "provider": "actions"
+  },
+  "prerequisites": [
+    {
+      "name": "cygwin",
+      "version": "2.4.1",
+      "arch": "x86-64",
+      "action": "install",
+      "provider": "exe"
+    }
+  ],
+  "actions": [
+    {
+      "name": "install",
+      "provider": "bash",
+      "settings": {
+        "command": "$env:SystemDrive\\cygwin\\bin\\bash.exe",
+        "args": [
+          "--login",
+          "-c"
+        ]
+      },
+      "parameters": [
+        {
+          "name": "command",
+          "value": "ssh-host-config"
+        },
+        {
+          "name": "args",
+          "value": [
+            "-y",
+            "-c",
+            "'ntsec mintty'",
+            "-u",
+            "sshd",
+            "-w",
+            "'{secret:sshd-password}'"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "service-account-create",
+      "provider": "cmd",
+      "parameters": [
+        {
+          "name": "command",
+          "value": "net"
+        },
+        {
+          "name": "args",
+          "value": [
+            "user",
+            "sshd",
+            "{secret:sshd-password}",
+            "/active:yes"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "set-service-credentials",
+      "provider": "powershell-function",
+      "parameters": [
+        {
+          "name": "command",
+          "value": "OpenCloudConfig.Set-ServiceCredentials"
+        },
+        {
+          "name": "parameters",
+          "value": [
+            {
+              "name": "service",
+              "value": "sshd"
+            },
+            {
+              "name": "username",
+              "value": "sshd"
+            },
+            {
+              "name": "password",
+              "value": "{secret:sshd-password}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "service-start",
+      "provider": "cmd",
+      "parameters": [
+        {
+          "name": "command",
+          "value": "net"
+        },
+        {
+          "name": "args",
+          "value": [
+            "start",
+            "sshd"
+          ]
+        }
+      ]
+    }
+  ],
+  "validations": [
+    {
+      "provider": "powershell-function",
+      "parameters": [
+        {
+          "name": "command",
+          "value" "OpenCloudConfig.Get-ServiceStatus"
+        },
+        {
+          "name": "parameters",
+          "value": [
+            {
+              "name": "ServiceName",
+              "value": "sshd"
+            }
+          ]
+        },
+        {
+          "name": "expect",
+          "value": "Running"
+        }
+      ]
+    }
+  ]
+}
