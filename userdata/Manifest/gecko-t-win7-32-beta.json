@@ -418,7 +418,7 @@
       "Key": "HKEY_USERS\\.DEFAULT\\Environment",
       "ValueName": "TMP",
       "ValueType": "ExpandString",
-      "ValueData": "Z:\Users\%USERNAME%\AppData\Roaming\Temp"
+      "ValueData": "Z:\\Users\\%USERNAME%\\AppData\\Roaming\\Temp"
     },
     {
       "ComponentName": "reg_UsersTEMPEnvVarOnZDrive",
@@ -427,7 +427,7 @@
       "Key": "HKEY_USERS\\.DEFAULT\\Environment",
       "ValueName": "TEMP",
       "ValueType": "ExpandString",
-      "ValueData": "Z:\Users\%USERNAME%\AppData\Roaming\Temp"
+      "ValueData": "Z:\\Users\\%USERNAME%\\AppData\\Roaming\\Temp"
     },
     {
       "ComponentName": "reg_WindowsErrorReportingLocalDumps",
