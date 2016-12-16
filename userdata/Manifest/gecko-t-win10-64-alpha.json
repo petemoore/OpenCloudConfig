@@ -321,22 +321,6 @@
       "Target": "C:\\mozilla-build\\msys\\etc\\cacert.pem"
     },
     {
-      "ComponentName": "env_TMP",
-      "ComponentType": "EnvironmentVariableSet",
-      "Comment": "Putting temp files on Z: drive should speed things up. :)",
-      "Name": "TMP",
-      "Value": "Z:\\Users\\%USERNAME%\\AppData\\Local\\Temp",
-      "Target": "Machine"
-    },
-    {
-      "ComponentName": "env_TEMP",
-      "ComponentType": "EnvironmentVariableSet",
-      "Comment": "Putting temp files on Z: drive should speed things up. :)",
-      "Name": "TEMP",
-      "Value": "Z:\\Users\\%USERNAME%\\AppData\\Local\\Temp",
-      "Target": "Machine"
-    },
-    {
       "ComponentName": "env_MOZILLABUILD",
       "ComponentType": "EnvironmentVariableSet",
       "Comment": "Absolutely required for mozharness builds. Python will fall in a heap, throwing misleading exceptions without this. :)",
