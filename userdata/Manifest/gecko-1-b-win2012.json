@@ -925,7 +925,7 @@
     {
       "ComponentName": "reg_UsersTMPEnvVarOnZDrive",
       "ComponentType": "RegistryKeySet",
-      "Comment": "",
+      "Comment": "Updates default user profile so that user temp directories go on Z: drive rather than C: drive",
       "Key": "HKEY_USERS\\.DEFAULT\\Environment",
       "ValueName": "TMP",
       "ValueType": "ExpandString",
@@ -934,7 +934,7 @@
     {
       "ComponentName": "reg_UsersTEMPEnvVarOnZDrive",
       "ComponentType": "RegistryKeySet",
-      "Comment": "",
+      "Comment": "Updates default user profile so that user temp directories go on Z: drive rather than C: drive",
       "Key": "HKEY_USERS\\.DEFAULT\\Environment",
       "ValueName": "TEMP",
       "ValueType": "ExpandString",
