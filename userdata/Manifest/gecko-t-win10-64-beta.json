@@ -459,7 +459,7 @@
         "--config",
         "C:\\generic-worker\\generic-worker.config",
         "--password",
-        "<PASSWORD>"
+        "qazwsx123!@#QAZ"
       ],
       "DependsOn": [
         {
@@ -1128,7 +1128,7 @@
         "-u",
         "GenericWorker",
         "-p",
-        "<PASSWORD>",
+        "qazwsx123!@#QAZ",
         "LocalAppData",
         "Z:\\Users\\GenericWorker\\AppData\\Local"
       ],
@@ -1151,7 +1151,7 @@
               "-u",
               "GenericWorker",
               "-p",
-              "<PASSWORD>",
+              "qazwsx123!@#QAZ",
               "LocalAppData"
             ],
             "Match": "Z:\\Users\\GenericWorker\\AppData\\Local"
@@ -1168,7 +1168,7 @@
         "-u",
         "GenericWorker",
         "-p",
-        "<PASSWORD>",
+        "qazwsx123!@#QAZ",
         "LocalAppData",
         "Z:\\Users\\GenericWorker\\AppData\\Roaming"
       ],
@@ -1191,7 +1191,7 @@
               "-u",
               "GenericWorker",
               "-p",
-              "<PASSWORD>",
+              "qazwsx123!@#QAZ",
               "RoamingAppData"
             ],
             "Match": "Z:\\Users\\GenericWorker\\AppData\\Roaming"
@@ -1208,7 +1208,7 @@
         "-u",
         "GenericWorker",
         "-p",
-        "<PASSWORD>",
+        "qazwsx123!@#QAZ",
         "LocalAppDataLow",
         "Z:\\Users\\GenericWorker\\AppData\\LocalLow"
       ],
@@ -1231,7 +1231,7 @@
               "-u",
               "GenericWorker",
               "-p",
-              "<PASSWORD>",
+              "qazwsx123!@#QAZ",
               "LocalAppDataLow"
             ],
             "Match": "Z:\\Users\\GenericWorker\\AppData\\LocalLow"
