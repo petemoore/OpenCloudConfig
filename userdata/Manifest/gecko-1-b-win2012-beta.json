@@ -1039,7 +1039,7 @@
           "ComponentName": "GenericWorkerDirectory"
         }
       ],
-      "Source": "https://github.com/taskcluster/generic-worker/releases/download/v8.2.0/generic-worker-windows-amd64.exe",
+      "Source": "https://github.com/taskcluster/generic-worker/releases/download/v9.3.0/generic-worker-windows-amd64.exe",
       "Target": "C:\\generic-worker\\generic-worker.exe"
     },
     {
@@ -1105,11 +1105,11 @@
         ],
         "CommandsReturn": [
           {
-            "Command": "C:\\generic-worker\\generic-worker.exe",
+            Command": "C:\\generic-worker\\generic-worker.exe",
             "Arguments": [
               "--version"
             ],
-            "Match": "generic-worker 8.2.0"
+            "Match": "generic-worker 9.3.0"
           }
         ]
       }
