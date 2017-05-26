@@ -1119,7 +1119,7 @@
         ],
         "CommandsReturn": [
           {
-            Command": "C:\\generic-worker\\generic-worker.exe",
+            "Command": "C:\\generic-worker\\generic-worker.exe",
             "Arguments": [
               "--version"
             ],
